@@ -11,6 +11,10 @@ body {
 }
 button {
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0 , .2);
+    transition: .3s;
+  }
 }
 .wrapper {
   width: 100%;
@@ -26,7 +30,7 @@ button {
     font-weight: 500;
     font-size: 32px;
     line-height: 37px;
-    margin: 0 0 1rem; 
+    margin: 0 0 1rem;
   }
   .form-container {
     background: #e0edfa;
@@ -45,9 +49,15 @@ button {
         background: #ffffff;
         border-radius: 5px;
         padding: 10px 22px;
-        border: none;
+        border: 1.5px solid #fff;
         min-height: 22px;
         min-width: 79%;
+        transition: 0.3s;
+        &:focus-visible,
+        &:focus {
+          border: 1.5px solid #da6fa2;
+          outline: none;
+        }
       }
       button {
         background: #6fda9a;
@@ -103,19 +113,19 @@ button {
 @media screen and (max-width: 768px) {
   .form-container {
     width: 90%;
-    min-width: 90%  !important;
+    min-width: 90% !important;
   }
 }
 @media screen and (max-width: 593px) {
   .form-container__fields {
-    flex-direction: column ;
-    justify-content: center ;
+    flex-direction: column;
+    justify-content: center;
     input {
-      min-width: unset ;
+      min-width: unset;
       margin-bottom: 10px;
     }
     button {
-      margin-left: 0 !important; 
+      margin-left: 0 !important;
     }
   }
 }
